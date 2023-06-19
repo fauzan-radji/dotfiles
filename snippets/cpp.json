@@ -1,0 +1,28 @@
+{
+  "Boiler Plate": {
+    "prefix": "cpp",
+    "body": [
+      "#include <iostream>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "\t${1:cout << \"Hello World!\"}",
+      "\treturn 0;",
+      "}"
+    ]
+  },
+
+  "Print Something": {
+    "prefix": "cout",
+    "body": "cout << ${1:\"${2:Hello World!}\"};"
+  },
+
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for(int ${3:i} = 0; ${3:i} < sizeof(${1:arr}) / sizeof(${2:int}); ${3:i}++)",
+      "\t${4:cout << ${1:arr}[${3:i}] << endl};$0",
+      "}"
+    ]
+  }
+}

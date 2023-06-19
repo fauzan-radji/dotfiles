@@ -1,0 +1,11 @@
+# this is my custom git config file
+# open any terminal and type `git config --global -e` to edit your git config file
+# paste this file in your git config file and save it
+
+[init]
+        defaultBranch = main
+[alias]
+        last = log -1 HEAD
+        ac = !git add . && git commit -m
+        graph = log --all --oneline --decorate --graph
+        garph = log --all --oneline --decorate --graph
