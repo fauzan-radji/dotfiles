@@ -9,3 +9,6 @@
         ac = !git add . && git commit -m
         graph = log --all --oneline --decorate --graph
         garph = log --all --oneline --decorate --graph
+        tracked = !git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
+        editconfig = config --global -e
+        amend = commit --amend -m
