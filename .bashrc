@@ -9,9 +9,3 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-# Here is my Custom aliases
-alias version='lsb_release -a'
-alias start='xdg-open'
-alias ngoding='. ~/code.sh'
-alias nugas='. ~/nugas.sh'
