@@ -20,4 +20,4 @@ else
   BRANCH="Not a git repository"
 fi
 
-echo "\n${LIGHT_BLUE}┌──(${LIGHT_RED}\u💀${LIGHT_GREEN}\H${LIGHT_BLUE})-[${YELLOW}\w${LIGHT_BLUE}] ${LIGHT_CYAN}(${BRANCH})\n${LIGHT_BLUE}└─${LIGHT_CYAN}\$ ${RESTORE}"
+echo "\n${LIGHT_BLUE}┌──(${LIGHT_RED}\u💀${LIGHT_GREEN}\H${LIGHT_BLUE})─[${YELLOW}\w${LIGHT_BLUE}]─(${LIGHT_CYAN}${BRANCH}${LIGHT_BLUE})\n${LIGHT_BLUE}└─${LIGHT_CYAN}\$ ${RESTORE}"

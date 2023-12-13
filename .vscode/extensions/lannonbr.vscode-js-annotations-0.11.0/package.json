@@ -1,0 +1,145 @@
+{
+	"name": "vscode-js-annotations",
+	"displayName": "JS Parameter Annotations",
+	"description": "Annotations for parameters in your JS / TS Files to mimic named parameters",
+	"version": "0.11.0",
+	"publisher": "lannonbr",
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lannonbr/vscode-js-annotations"
+	},
+	"categories": [
+		"Other"
+	],
+	"homepage": "https://github.com/lannonbr/vscode-js-annotations",
+	"bugs": {
+		"url": "https://github.com/lannonbr/vscode-js-annotations/issues"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "jsannotations.toggle",
+				"title": "JS Annotations: Hide / Show Annotations"
+			}
+		],
+		"configuration": [
+			{
+				"title": "JS Annotations",
+				"properties": {
+					"jsannotations.enabled": {
+						"type": "boolean",
+						"description": "Enable JS Annotations",
+						"default": true
+					},
+					"jsannotations.hideInvalidAnnotation": {
+						"type": "boolean",
+						"description": "Hide annotations for invalid params",
+						"default": true
+					},
+					"jsannotations.hideDiagnostics": {
+						"type": "boolean",
+						"description": "Hide red squiggles under invalid parameters",
+						"default": false
+					},
+					"jsannotations.hideIfEqual": {
+						"type": "boolean",
+						"description": "Hide annotation if argument name matches parameter name",
+						"default": true
+					},
+					"jsannotations.fontWeight": {
+						"type": "string",
+						"default": "400",
+						"enum": [
+							"100",
+							"200",
+							"300",
+							"400",
+							"500",
+							"600",
+							"700",
+							"800",
+							"900"
+						],
+						"description": "Annotation styling of font-weight CSS property"
+					},
+					"jsannotations.fontStyle": {
+						"type": "string",
+						"default": "italic",
+						"enum": [
+							"normal",
+							"italic"
+						],
+						"description": "Annotation styling of font-style CSS property"
+					},
+					"jsannotations.showFirstSpace": {
+						"type": "boolean",
+						"description": "Show leading whitespace for first parameter",
+						"default": true
+					}
+				}
+			}
+		],
+		"colors": [
+			{
+				"id": "jsannotations.annotationForeground",
+				"description": "Specifies the foreground color for the annotations",
+				"defaults": {
+					"dark": "#ccc",
+					"light": "#444",
+					"highContrast": "#444"
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"command": "jsannotations.toggle",
+				"key": "ctrl+k a",
+				"mac": "cmd+k a"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"test:unit": "MOCHA_GREP=\"@unit\" npm test --silent",
+		"lint": "node ./node_modules/.bin/tslint --project ."
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.0.0",
+		"@types/node": "^7.0.43",
+		"husky": "^1.0.1",
+		"typescript": "^3.0.0",
+		"vscode": "^1.1.30"
+	},
+	"dependencies": {
+		"babylon": "^7.0.0-beta.47",
+		"recast": "^0.16.0",
+		"tslint": "5.12.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint"
+		}
+	},
+	"__metadata": {
+		"id": "1e6ba7ec-3eef-4a3c-892e-26af6fa2d505",
+		"publisherId": "e924ea4e-1497-499e-8577-d103635fdf9c",
+		"publisherDisplayName": "Benjamin Lannon",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1690460760471,
+		"preRelease": false
+	}
+}

@@ -1,4 +1,6 @@
 alias version='lsb_release -a'
-alias start='xdg-open'
+alias start='echo "use open"'
 alias ngoding='. ~/code.sh'
 alias nugas='. ~/nugas.sh'
+alias android='~/mount.sh; studio'
+alias notify='notify-send -u critical'

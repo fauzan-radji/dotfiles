@@ -1,0 +1,139 @@
+{
+	"name": "vscode-toggle-quotes",
+	"displayName": "Toggle Quotes",
+	"description": "Toggle cycle \" -> ' -> `",
+	"version": "0.3.6",
+	"publisher": "BriteSnow",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BriteSnow/vscode-toggle-quotes"
+	},
+	"engines": {
+		"vscode": "^1.63.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:editor.togglequotes"
+	],
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"main": "./out/src/extension",
+	"icon": "icon.png",
+	"contributes": {
+		"configuration": {
+			"title": "Toggle Quotes",
+			"properties": {
+				"togglequotes.chars": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"\"",
+						"'"
+					],
+					"description": "The quote characters to toggle between.",
+					"scope": "language-overridable"
+				}
+			}
+		},
+		"configurationDefaults": {
+			"[typescript]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[javascript]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[typescriptreact]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[javascriptreact]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[svelte]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[vue]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[markdown]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			},
+			"[go]": {
+				"togglequotes.chars": [
+					"\"",
+					"'",
+					"`"
+				]
+			}
+		},
+		"commands": [
+			{
+				"command": "editor.togglequotes",
+				"title": "Toggle Quote"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "editor.togglequotes",
+				"key": "ctrl+'",
+				"mac": "cmd+'"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"test": "echo \"No tests configured\""
+	},
+	"devDependencies": {
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^16.7.1",
+		"@types/vscode": "^1.63.1",
+		"mocha": "^9.1.3",
+		"typescript": "^4.5.4"
+	},
+	"__metadata": {
+		"id": "8d088af2-ecd1-4b8f-93e9-322125c47b3c",
+		"publisherId": "4f0b999b-00a3-4e77-b16b-57e094b1ca59",
+		"publisherDisplayName": "BriteSnow",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1689941649364,
+		"preRelease": false
+	}
+}

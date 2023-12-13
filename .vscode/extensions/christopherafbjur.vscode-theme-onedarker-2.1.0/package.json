@@ -1,0 +1,57 @@
+{
+	"name": "vscode-theme-onedarker",
+	"displayName": "Atom One Darker Theme",
+	"description": "Inspired by Atom One Dark but with a higher contrast.",
+	"icon": "logo.png",
+	"version": "2.1.0",
+	"publisher": "christopherafbjur",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"galleryBanner": {
+		"color": "#21252B",
+		"theme": "dark"
+	},
+	"keywords": [
+		"atom",
+		"theme",
+		"dark",
+		"darker",
+		"contrast",
+		"high contrast",
+		"one dark",
+		"one darker"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Atom One Darker",
+				"uiTheme": "vs-dark",
+				"path": "./themes/atom_one_darker_high_contrast.json"
+			}
+		]
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/christopherafbjur/vscode-theme-onedarker/issues",
+		"email": "christopher89tech@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/christopherafbjur/vscode-theme-onedarker.git"
+	},
+	"homepage": "https://github.com/christopherafbjur/vscode-theme-onedarker/blob/master/README.md",
+	"__metadata": {
+		"id": "ccc5962e-179e-4a8b-953a-58943d20b2a1",
+		"publisherId": "89397a5e-f19f-430d-ac86-9b0396b161b2",
+		"publisherDisplayName": "Christopher Af Bjur",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1689941648470,
+		"preRelease": false
+	}
+}

@@ -1,0 +1,22 @@
+[user]
+	name = Fauzan Radji
+	email = 72055502+fauzan-radji@users.noreply.github.com
+[init]
+  defaultBranch = main
+[alias]
+  ac = !git add . && git commit -m
+  amend = commit --amend -m
+	branch-author = !git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
+	df = difftool --dir-diff
+  editconfig = config --global -e
+  graph = log --all --oneline --decorate --graph
+  garph = log --all --oneline --decorate --graph
+	grpah = log --all --oneline --decorate --graph
+  last = log -1 HEAD
+  tracked = !git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[core]
+	autocrlf = input
