@@ -5,7 +5,7 @@
   defaultBranch = main
 [alias]
   ac = !git add . && git commit -m
-  amend = commit --amend -m
+	amend = commit --amend
 	branch-author = !git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
 	df = difftool --dir-diff
   editconfig = config --global -e
@@ -14,6 +14,8 @@
 	grpah = log --all --oneline --decorate --graph
   last = log -1 HEAD
   tracked = !git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
+	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [diff]
 	tool = vscode
 [difftool "vscode"]
