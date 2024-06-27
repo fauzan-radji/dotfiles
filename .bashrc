@@ -124,6 +124,4 @@ function prompt_command {
 PROMPT_DIRTRIM=3
 PROMPT_COMMAND=prompt_command
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="$PATH:/home/fauzan-radji/development/flutter/bin"

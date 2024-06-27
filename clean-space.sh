@@ -5,7 +5,7 @@ apt-get autoremove
 sudo apt-get clean
 
 # Clear systemd journal logs
-journalctl --vacuum-time=3d
+journalctl --vacuum-time=2d
 
 # Remove older versions of Snap applications
 ./clean-snap.sh
