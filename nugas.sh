@@ -1,7 +1,7 @@
 ~/mount.sh
 
-workpath=/media/fauzan-radji/Data/documents/coolyeah/smt-6/${1:-};
+workpath=/media/fauzan-radji/Data/documents/coolyeah/tugas-akhir/siskp/proposal/${1:-tugas-akhir.md};
 echo "Opening \"$workpath\"" ;
 cd "$workpath";
-xdg-open ./;
-
+code ./;
+open /media/fauzan-radji/Data/documents/coolyeah/tugas-akhir/siskp/referensi/;

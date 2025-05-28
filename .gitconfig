@@ -1,24 +1,33 @@
 [user]
-	name = Fauzan Radji
-	email = 72055502+fauzan-radji@users.noreply.github.com
+  name = Fauzan Radji
+  email = 72055502+fauzan-radji@users.noreply.github.com
 [init]
   defaultBranch = main
 [alias]
-  ac = !git add . && git commit -m
-	amend = commit --amend
-	branch-author = !git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
-	df = difftool --dir-diff
-  editconfig = config --global -e
+  ac = !git add -A && git commit -m
+  amend = commit --amend
+  edit-date = commit --amend --no-edit --date
+  branch-author = !git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
+  df = difftool --dir-diff
+  edit-config = config --global -e
   graph = log --all --oneline --decorate --graph
   garph = log --all --oneline --decorate --graph
-	grpah = log --all --oneline --decorate --graph
+  grpah = log --all --oneline --decorate --graph
   last = log -1 HEAD
   tracked = !git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
-	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+  permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+  alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+  rupdate = !git fetch --all --prune && git graph
+  undo = reset --soft HEAD~1
+  cm = commit
+  br = branch
+  gr = log --all --oneline --decorate --graph
+  ch = checkout
+  dev = checkout dev
+  main = checkout main
 [diff]
-	tool = vscode
+  tool = vscode
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
 [core]
-	autocrlf = input
+  autocrlf = input

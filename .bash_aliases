@@ -6,3 +6,5 @@ alias android='~/mount.sh; studio'
 alias notify='notify-send -u critical'
 alias please='sudo'
 alias files='open /media/fauzan-radji/Data/'
+
+alias phpunit='vendor/bin/phpunit'
