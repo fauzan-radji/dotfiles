@@ -10,9 +10,10 @@
   branch-author = !git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
   df = difftool --dir-diff
   edit-config = config --global -e
+  gr = log -n 10 --all --oneline --decorate --graph
   graph = log --all --oneline --decorate --graph
-  garph = log --all --oneline --decorate --graph
-  grpah = log --all --oneline --decorate --graph
+  garph = graph
+  grpah = graph
   last = log -1 HEAD
   tracked = !git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
   permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
@@ -21,10 +22,9 @@
   undo = reset --soft HEAD~1
   cm = commit
   br = branch
-  gr = log --all --oneline --decorate --graph
   ch = checkout
-  dev = checkout dev
-  main = checkout main
+  dev = checkout --track origin/dev
+  main = checkout --track origin/main
 [diff]
   tool = vscode
 [difftool "vscode"]
